@@ -323,8 +323,10 @@
 
   yearSel.addEventListener("change", function () { state.year = yearSel.value; state.page = 0; render(); });
   sortSel.addEventListener("change", function () { state.sort = sortSel.value; state.page = 0; render(); });
-  prevBtn.addEventListener("click", function () { if (state.page > 0) { state.page -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); } });
-  nextBtn.addEventListener("click", function () { state.page += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const scrollTarget = document.getElementById("listings");
+  prevBtn.addEventListener("click", function () { if (state.page > 0) { state.page -= 1; render(); scrollTarget.scrollIntoView({ top: 0, behavior: reduceMotion ? "auto" : "smooth" }); } });
+  nextBtn.addEventListener("click", function () { state.page += 1; render(); scrollTarget.scrollIntoView({ top: 0, behavior: reduceMotion ? "auto" : "smooth" }); });
   el("reset").addEventListener("click", function () {
     state.year = ""; state.q = ""; state.page = 0; search.value = "";
     if (state.searching) location.hash = "#/topic/" + state.slug; else render();
