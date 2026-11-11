@@ -237,11 +237,6 @@
       frag.appendChild(rowFor(D.articles[i], Math.max(1, no)));
     });
     results.replaceChildren(frag);
-    // open the last row's summary, like a broadsheet's closing abstract
-    if (slice.length) {
-      const lastToggle = results.lastElementChild.querySelector(".row-toggle");
-      if (lastToggle && lastToggle.getAttribute("aria-expanded") === "false") lastToggle.click();
-    }
     if (filtered.length > 50) results.setAttribute("aria-busy", "false");
 
     emptyEl.hidden = filtered.length > 0;
