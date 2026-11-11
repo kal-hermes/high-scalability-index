@@ -145,8 +145,9 @@ body::after {
 .sections {
   border-right: 1px solid var(--hair);
   padding: 0.55vw 1.5vw 1vw 2vw;
-  overflow: hidden;
+  overflow: visible;
 }
+.rail-inner { position: sticky; top: 0; }
 .rail-heading {
   font-family: "Archivo", sans-serif; font-weight: 700;
   font-size: 1.05vw;
@@ -155,7 +156,7 @@ body::after {
   padding-bottom: .5vw;
   border-bottom: 1px solid var(--hair-strong);
 }
-.rail-list { list-style: none; margin-top: .5vw; max-height: 46vh; overflow-y: auto; }
+.rail-list { list-style: none; margin-top: .5vw; max-height: calc(100vh - 17vw); overflow-y: auto; }
 .rail-list li { border-bottom: 1px solid var(--hair); }
 .rail-list a {
   display: flex; align-items: baseline; gap: .7vw;
@@ -324,8 +325,9 @@ li.expanded .row-excerpt {
   .hero-shell { grid-template-columns: 1fr; }
   .sections { border-right: none; border-bottom: 1px solid var(--hair);
               padding: 3vw 3.3vw; overflow: visible; }
+  .rail-inner { position: static; }
   .rail-heading { font-size: 5.4vw; }
-  .rail-list { display: flex; flex-wrap: wrap; gap: 1vw 4vw; }
+  .rail-list { display: flex; flex-wrap: wrap; gap: 1vw 4vw; max-height: none; overflow-y: visible; }
   .rail-list li { border-bottom: none; }
   .rail-list a { padding: 1vw 1vw; font-size: 3.6vw; gap: 2vw; }
   .rail-list .n { font-size: 3vw; padding: .2vw 1.6vw; }
