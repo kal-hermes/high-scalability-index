@@ -1,0 +1,8 @@
+# Impeccable review/build artifacts (internal tooling, large captures)
+.impeccable/
+
+# Full-text mirrors of highscalability.com articles (copyright + size)
+# Kept local only; the SPA links to the original articles instead.
+pages/
+articles_html/
+article_text/
