@@ -161,9 +161,10 @@ Everything is square. Zero radius on badges, inputs, chips, and rules. Corners s
 
 ### Sections Rail
 - SECTIONS label in Archivo caps over a strong hairline.
-- Links in Archivo 700 with Rokkitt count badges on ink squares.
-- Active row: red marker bar on the left, red badge, no tint fill.
-- Rail scrolls independently at 46vh max height.
+- Links in Archivo 700 with Rokkitt count badges.
+- Badge fills follow the depth scale. Ink numerals on the tonal fills keep the contrast at 6.5:1 or better. The active badge turns signal red with paper numerals.
+- Active row: red marker bar on the left, no tint fill.
+- The rail sticks to the viewport while the listings scroll. Its list stretches to the window bottom and scrolls internally after 27 topics.
 
 ### Listing Rows (signature component)
 - Compact rows: title, date, author on one line with hairline separators.

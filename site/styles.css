@@ -188,10 +188,13 @@ body::after {
 }
 .rail-list li.on { margin-left: -1.5vw; border-left: .7vw solid var(--red); }
 .rail-list li.on a { font-weight: 700; padding-left: 1.2vw; }
-.rail-list li.on .n { background: var(--red); border-color: var(--red); }
+.rail-list li.on .n { background: var(--red); border-color: var(--red); color: var(--paper); }
 .rail-list .d1 { background: var(--d1); } .rail-list .d2 { background: var(--d2); }
 .rail-list .d3 { background: var(--d3); } .rail-list .d4 { background: var(--d4); }
 .rail-list .d5 { background: var(--d5); }
+/* depth-toned badges carry pale fills; ink text keeps WCAG contrast (6.5:1 worst case) */
+.rail-list .n.d1, .rail-list .n.d2, .rail-list .n.d3,
+.rail-list .n.d4, .rail-list .n.d5 { color: var(--ink); border-color: var(--ink-soft); }
 
 /* Page */
 .page { padding: 0 3.3vw 2vw 2.2vw; min-width: 0; }
