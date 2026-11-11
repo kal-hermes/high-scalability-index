@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The High Scalability Index — every article, catalogued by subject</title>
+<meta name="description" content="A public, topic-organised catalogue of all 2,451 High Scalability articles (2007–2024), classified into 26 sections from full text and the site's own editorial tags. Links to originals; nothing republished.">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="fonts/faces.css">
+</head>
+<body>
+  <img class="ground-plate" src="assets/plates/newsprint-ground.png" alt="" aria-hidden="true">
+  <a class="skip-link" href="#listings">Skip to the listings</a>
+
+  <header class="masthead" id="top">
+    <h1 class="masthead-title"><a href="#/">The High Scalability Index</a></h1>
+    <p class="tagline">Every article, catalogued by subject</p>
+    <div class="dateline">
+      <p class="vol-counts" id="vol-counts">Vol. 2007–2024 · 2,451 entries · 26 sections</p>
+      <div class="search-box">
+        <input type="search" id="search" placeholder="Search 2,451 articles…"
+               aria-label="Search all articles" autocomplete="off">
+        <button type="submit" class="search-btn" aria-label="Search">⌕</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero-shell">
+    <nav class="sections" id="sections" aria-label="Sections">
+      <div class="rail-inner">
+        <h2 class="rail-heading">Sections</h2>
+        <ol class="rail-list" id="rail-list"></ol>
+      </div>
+    </nav>
+
+    <main class="page" id="listings" aria-live="polite">
+      <noscript><p class="noscript">This index needs JavaScript to filter and browse.
+        The raw catalogue is available in the repository.</p></noscript>
+      <div class="section-head">
+        <p class="kicker" id="kicker">Section I</p>
+        <h2 class="section-title" id="section-title">Scalability Architecture &amp; Patterns</h2>
+      </div>
+      <div class="filter-row" id="filter-row" hidden>
+        <label class="visually-hidden" for="year">Year</label>
+        <select id="year" aria-label="Filter by year"></select>
+        <label class="visually-hidden" for="sort">Sort</label>
+        <select id="sort" aria-label="Sort order">
+          <option value="new">Newest first</option>
+          <option value="old">Oldest first</option>
+        </select>
+      </div>
+      <div id="results-meta" class="results-meta" role="status"></div>
+      <p class="standfirst" id="standfirst"></p>
+      <div class="listings-head" aria-hidden="true">
+        <span class="lh-date">Date</span><span class="lh-title">Title</span><span class="lh-by">By</span><span class="lh-no">№</span>
+      </div>
+      <ol class="listings" id="results"></ol>
+      <p class="empty" id="empty" hidden>No articles match. <button type="button" class="linklike" id="reset">Reset the filters</button></p>
+      <p class="continued" id="continued"></p>
+      <nav class="pager" id="pager" aria-label="Pages">
+        <button type="button" id="prev" class="pager-btn">← Newer entries</button>
+        <span id="page-info"></span>
+        <button type="button" id="next" class="pager-btn">Older entries →</button>
+      </nav>
+    </main>
+  </div>
+
+  <footer class="colophon">
+    <p>An index of <a href="https://highscalability.com">highscalability.com</a>, catalogued from the
+       full text of every article and the site's own editorial tags. Titles link to the originals;
+       nothing is republished here.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
